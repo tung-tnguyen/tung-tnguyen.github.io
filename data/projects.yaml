@@ -1,0 +1,100 @@
+- title: Steam Product Health & Player Feedback Intelligence
+  slug: steam-product-health
+  eyebrow: ANALYTICS & DATA PLATFORM
+  description: A player-feedback analytics project for understanding product health, review trends, and recurring issues in Steam games.
+  categories: [data-analytics, data-engineering, data-science]
+  tags: [Python, SQL, PostgreSQL, dbt, Prefect]
+  accent: cyan
+  featured: true
+  metric: Player feedback intelligence
+  summary: Building a repeatable pipeline and reporting layer for turning Steam reviews into product and player insights.
+  sections:
+    - title: Problem & motivation
+      body: Steam reviews contain useful signals about player satisfaction, bugs, product changes, and recurring complaints, but the information is difficult to summarize consistently across games and time periods.
+    - title: Data workflow
+      body: The planned workflow uses Python and Prefect for ingestion and orchestration, PostgreSQL for structured storage, and dbt for transformations. Docker is used to keep the development environment repeatable.
+    - title: Analysis & reporting
+      body: The analysis will look at review volume, sentiment, helpfulness, recurring topics, changes in reception over time, and differences across games or genres. Power BI will be used for the reporting layer.
+    - title: Current status & next steps
+      body: In progress. The pipeline, transformation models, NLP analysis, and dashboard will be documented as each part is completed. No business conclusions are presented here until they are supported by the finished analysis.
+
+- title: Steam Game Recommendation System
+  slug: steam-game-recommendation
+  eyebrow: NLP & INFORMATION RETRIEVAL
+  description: A content-based recommendation system that uses player feedback to find games with similar gameplay and audience signals.
+  categories: [data-science, data-engineering]
+  tags: [NLP, Sentence Transformers, Semantic Embeddings, Information Retrieval]
+  accent: amber
+  featured: true
+  metric: Semantic game retrieval
+  summary: Testing whether review language can help recommend similar games beyond what standard tags capture.
+  sections:
+    - title: Problem & motivation
+      body: Community tags are useful but often broad. This project explores whether the language players use in reviews can represent more specific similarities between games.
+    - title: Modeling approach
+      body: The system uses NLP, Sentence Transformers, and semantic embeddings to represent review text and retrieve similar games. Tag-based and hybrid approaches can be compared against the review-based system.
+    - title: Evaluation plan
+      body: A human-labeled game-pair benchmark will support evaluation with retrieval metrics such as Precision@K, Recall@K where appropriate, NDCG, and qualitative error analysis.
+    - title: Current status & next steps
+      body: In progress. Fine-tuning, a broader benchmark, and final comparison results are future work and are not presented as completed features.
+
+- title: Generative AI for Battery Microstructures
+  slug: battery-microstructure-generation
+  eyebrow: RESEARCH · ML ENGINEERING
+  description: Research on generating synthetic 3D battery electrode microstructures for simulation work.
+  categories: [data-science, research]
+  tags: [PyTorch, Diffusion, CUDA, Slurm]
+  accent: amber
+  featured: true
+  metric: ≈97% voxel reconstruction accuracy
+  summary: Creating synthetic electrode structures that can be used in later battery simulations.
+  sections:
+    - title: Research objective
+      body: The goal is to reduce the manual effort required to create useful synthetic electrode microstructures while preserving the spatial characteristics important for simulation workflows.
+    - title: Technical approach
+      body: The work combines 3D autoencoders and latent diffusion with CUDA-accelerated training on Slurm-managed high-performance computing resources. Docker, FastAPI, and Streamlit support the path from research code toward an accessible application.
+    - title: Reported results
+      body: Reported outcomes include approximately 97% voxel-wise reconstruction accuracy and an approximately 80% reduction in the manual generation workflow. These figures should be read in the context of the research team's evaluation protocol.
+    - title: Publication boundary
+      body: Public figures, model outputs, and implementation details must be approved for release by the research team. Unapproved research assets are intentionally represented here with a placeholder visual.
+
+- title: Automated Pavement Damage Detection
+  slug: pavement-damage-detection
+  eyebrow: RESEARCH · COMPUTER VISION
+  description: A computer-vision project for finding pavement D-cracking in aerial imagery.
+  categories: [data-science, research, data-analytics]
+  tags: [PyTorch, U-Net, SAM, GeoPandas]
+  accent: coral
+  featured: true
+  metric: 0.89 IoU · 0.90 F1
+  summary: Using aerial imagery to make pavement inspections faster and more consistent.
+  sections:
+    - title: Problem & contribution
+      body: Pavement D-cracking is difficult to assess consistently at scale. The project developed and evaluated computer-vision workflows that turn large aerial orthomosaics into model-ready image tiles, predictions, and ArcGIS-compatible outputs.
+    - title: Modeling workflow
+      body: The workflow uses PyTorch-based semantic segmentation with U-Net and SAM components, GPU inference, Rasterio, and GeoPandas. Ground-truth masks, predictions, and geospatial metadata are kept aligned for error analysis.
+    - title: Results & evaluation
+      body: Reported evaluation reached 0.89 intersection-over-union and a 0.90 F1 score on 65 samples, with more than 40% fewer false positives. The pipeline processed aerial orthomosaics up to 1.2 gigapixels.
+    - title: Limitations & future work
+      body: Dataset coverage and sample count limit generalization claims. Future work should expand geographic and seasonal diversity, stress-test edge cases, and validate operational thresholds with domain experts.
+
+- title: Particle Grain Segmentation & Analysis
+  slug: particle-grain-segmentation
+  eyebrow: RESEARCH · IMAGE ANALYSIS
+  description: A research project for segmenting 3D microscopy data and analyzing particle or grain connectivity at scale.
+  categories: [data-science, research]
+  tags: [Python, OpenCV, Watershed, NetworkX]
+  accent: violet
+  featured: true
+  metric: 10M+ voxel datasets
+  summary: Processing large three-dimensional microscopy datasets to separate structures and study how they connect.
+  sections:
+    - title: Research objective
+      body: The project focused on turning volumetric microscopy data into usable segmentations so individual particles or grains and their connections could be analyzed.
+    - title: Segmentation workflow
+      body: The workflow used Python, OpenCV, watershed segmentation, and distance transforms to separate touching structures in 3D image data.
+    - title: Connectivity analysis
+      body: NetworkX was used to represent segmented structures as graphs and examine graph-based connectivity patterns across datasets containing more than 10 million voxels.
+    - title: Presentation & limitations
+      body: This work was presented at an undergraduate research forum. Public figures and microscopy assets should be added only after confirming that they are approved for release.
+

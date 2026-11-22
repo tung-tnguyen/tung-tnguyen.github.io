@@ -1,0 +1,29 @@
+baseURL = 'https://tung-tnguyen.github.io/'
+languageCode = 'en-us'
+title = 'Tung (Tristan) Nguyen — Data Science Portfolio'
+[params]
+  description = 'Data Science, Data Analytics, and Data Engineering portfolio for Tristan Nguyen.'
+  author = 'Tung (Tristan) Nguyen'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/#top'
+    weight = 1
+  [[menu.main]]
+    name = 'Projects'
+    url = '/#projects'
+    weight = 2
+  [[menu.main]]
+    name = 'Resume'
+    url = '/resume.pdf'
+    weight = 3
+  [[menu.main]]
+    name = 'Contact'
+    url = '/#contact'
+    weight = 4

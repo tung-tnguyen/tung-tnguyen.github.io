@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body><div class="noise"></div><header class="site-header"><a class="brand" href="/#top"><span class="brand-mark">TN</span><span>TUNG (TRISTAN) NGUYEN</span></a><nav><a href="/#top">Home</a><a href="/#about">About</a><a href="/resume.pdf">Resume</a><a href="/#contact">Contact</a></nav><button class="theme-toggle" type="button">◐</button></header><main class="section-wrap projects-page"><p class="kicker">PROJECTS</p><h1>All projects.</h1><p class="hero-lede">A collection of class, research, internship, and personal projects.</p><div class="project-grid">{{ range .Site.Data.projects }}{{ partial "project-card.html" . }}{{ end }}</div></main><footer class="site-footer section-wrap"><span>© 2026 Tung (Tristan) Nguyen</span><a href="/#top">Back home ↑</a></footer><script src="/assets/app.js"></script></body></html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+  <div class="noise"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top"><span class="brand-mark">TN</span><span>TUNG (TRISTAN) NGUYEN</span></a>
+    <nav aria-label="Primary navigation"><a href="#projects">Projects</a><a href="#about">About</a><a href="/resume.pdf">Resume</a><a href="#contact">Contact</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+  </header>
+  <main>
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="kicker">DATA SCIENCE & STATISTICS <span>／</span> MSU ’27</p>
+        <h1>Tung (Tristan)<br><em>Nguyen.</em></h1>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">See my projects <span>↘</span></a><a class="text-link" href="/resume.pdf">Resume <span>↗</span></a><a class="text-link" href="#contact">Contact me <span>↗</span></a></div>
+      </div>
+      <div class="hero-aside">{{ with resources.Get "images/profile.jpg" }}<img class="profile-photo" src="{{ .RelPermalink }}" alt="Portrait of Tristan Nguyen">{{ end }}</div>
+    </section>
+    <section class="section-wrap top-info" id="about"><div class="about-block"><div class="section-label">01 / ABOUT ME</div><p class="body-copy">Welcome! My name is Tung Nguyen, but you can call me Tristan. I'm currently a senior studying Data Science and Statistics at Michigan State University, with a minor in Economics.</p><p class="body-copy">Most of my work has been in machine learning, data analytics, and research. This site is a place to keep track of the projects I’ve worked on and what I learned.</p></div><div class="skills-block"><div class="section-label">02 / CORE SKILLS</div><div class="skills-columns"><div><h3>Programming & data</h3><p>Python · SQL · PostgreSQL<br>pandas · NumPy · Git</p></div><div><h3>ML & statistics</h3><p>PyTorch · scikit-learn<br>Computer vision · NLP · Evaluation</p></div><div><h3>Engineering & cloud</h3><p>ETL / ELT · Docker · FastAPI<br>AWS · Slurm · CUDA</p></div><div><h3>Analytics & visualization</h3><p>Power BI · Matplotlib<br>Statistical analysis · Storytelling</p></div></div></div></section>
+    <section class="section-wrap" id="projects"><div class="section-heading"><div class="section-label">03 / PROJECTS</div></div><div class="project-grid">{{ range where .Site.Data.projects "featured" true }}{{ partial "project-card.html" . }}{{ end }}</div></section>
+    <section class="contact section-wrap" id="contact"><div class="section-label">04 / CONTACT</div><div class="contact-panel"><div><h2>Contact<br>me.</h2><p>If you want to talk about a project, research, or an opportunity, feel free to reach out.</p></div><div class="contact-links"><a href="mailto:nguy1281@msu.edu"><span>EMAIL</span>nguy1281@msu.edu <b>↗</b></a><a href="https://linkedin.com/in/tungnguyn/" target="_blank" rel="noreferrer"><span>LINKEDIN</span>linkedin.com/in/tungnguyn/ <b>↗</b></a><a href="https://github.com/tung-tnguyen" target="_blank" rel="noreferrer"><span>GITHUB</span>github.com/tung-tnguyen <b>↗</b></a></div></div></section>
+  </main>
+  <footer class="site-footer section-wrap"><span>© 2026 Tristan Nguyen</span><span>Portfolio</span><a href="#top">Back to top ↑</a></footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
